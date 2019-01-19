@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { Modal } from 'react-native';
 import styled from 'styled-components';
 import { addCat } from '../actions/catActions';
+import CatList from '../components/ManageCats/CatList';
 import AddCatButton from '../components/ManageCats/AddCatButton';
 import AddCatForm from '../components/ManageCats/AddCatForm';
-import CatList from '../components/ManageCats/CatList';
 
 const HomeContainer = styled.View`
     flex: 1;
@@ -92,7 +92,7 @@ class ManageCats extends Component {
                         null
                 }
                 <ListContainer>
-                    <CatList allCats = {allCats} />
+                    <CatList allCats={allCats} />
                 </ListContainer>
                 <AddCatButton renderCatForm={this.renderCatForm} />
             </HomeContainer>

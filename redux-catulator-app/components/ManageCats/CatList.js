@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Flatlist } from 'react-native';
+import { FlatList } from 'react-native';
 import styled from 'styled-components';
 
 const Header = styled.Text`
@@ -16,18 +16,26 @@ const CatItem = styled.Text`
     width: 200;
 `;
 
+const ListViewWrapper = styled.View`
+    color: #212121;
+    justify-content: center;
+    height: 300;
+    width: 100%;
+`;
+
 class CatList extends Component {
     render() {
         const { allCats } = this.props;
         return (
-            /*<Flatlist
-                data={allCats}
-                ListHeaderComponent={<Header>List Cats</Header>}
-                ListEmptyComponent={<Header>You havent added any cats</Header>}
-                renderItem={({ item }) => <CatItem>{item.catName} {item.catBreed} {item.catAge} {item.catGender} {item.catColor}</CatItem>}
-                keyExtractor={(item, index) => `${item.catName}_${index}`}
-            />*/
-            <Header>Test</Header>
+            <ListViewWrapper>
+                <FlatList
+                    data={allCats}
+                    ListHeaderComponent={<Header>List Of Cats</Header>}
+                    ListEmptyComponent={<Header>You havent added any cats</Header>}
+                    renderItem={({ item }) => <CatItem>{item.catName} {item.catBreed} {item.catAge} {item.catGender} {item.catColor}</CatItem>}
+                    keyExtractor={(item, index) => `${item.catName}_${index}`}
+                    />
+            </ListViewWrapper>
         );
     }
 }
