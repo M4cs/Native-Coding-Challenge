@@ -12,7 +12,7 @@ const HeaderText = styled.Text`
     font-size: 22;
     color: white;
     text-align: center;
-    margin-top: 40;
+    margin-top: 20;
 `;
 
 const Input = styled.TextInput`
@@ -20,7 +20,7 @@ const Input = styled.TextInput`
     border-color: #212121;
     border-width: 1;
     width: 300;
-    color: #999999;
+    color: black;
     border-radius: 8;
     text-align: center;
     margin-left: 40;
