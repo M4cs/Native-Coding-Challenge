@@ -11,9 +11,9 @@ const getCatInfo = (state) => ({
     allCats
 });
 
-const addCat = (state, { payload: { catName, catBreed, catAge, catGender, catColor } }) => ({
+const addCat = (state, { payload: { catName, catBreed, catAge, catGender } }) => ({
     ...state,
-    allCats: [...state.allCats, { catName, catBreed, catAge, catGender, catColor }]
+    allCats: [...state.allCats, { catName, catBreed, catAge, catGender }]
 });
 
 const catReducer = handleActions(

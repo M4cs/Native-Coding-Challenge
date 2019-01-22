@@ -16,10 +16,12 @@ const AppNavigator = createStackNavigator({
             backgroundColor: '#212121'
         },
         headerTitleStyle: {
-            marginTop: 20,
             color: '#82b1ff'
         },
-        headerTruncatedBackTitle: 'Back'
+        headerTruncatedBackTitle: 'Back',
+        headerBackTitleStyle: {
+            color: '#82b1ff'
+        }
     }
 });
 

@@ -11,7 +11,7 @@ const HomeContainer = styled.TouchableOpacity`
     border-color: #82b1ff;
     background-color: #82b1ff;
     border-radius: 8;
-    margin-top: 125;
+    margin-top: 50;
     margin-left: 10;
 `;
 

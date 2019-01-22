@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { deleteCat } from '../../actions/catActions';
+import AddCatButton from './AddCatButton';
 
 const Button = styled.TouchableHighlight`
     height: 75;
@@ -19,14 +21,14 @@ const ButtonText = styled.Text`
     text-align: center;
 `;
 
-const AddCatButton = ({ renderCatForm }) => (
-    <Button onPress={renderCatForm}>
-        <ButtonText>Add Cat</ButtonText>
+const DeleteCatButton = ({ renderDeleteForm }) => (
+    <Button onPress={renderDeleteForm}>
+        <ButtonText>Delete Cat</ButtonText>
     </Button>
 );
 
-AddCatButton.propTypes = {
-    renderCatForm: PropTypes.func
+DeleteCatButton.propTypes = {
+    renderDeleteForm: PropTypes.func
 };
 
-export default AddCatButton;
+export default DeleteCatButton

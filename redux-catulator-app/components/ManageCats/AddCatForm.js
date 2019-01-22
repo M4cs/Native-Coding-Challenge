@@ -74,18 +74,16 @@ class AddCatForm extends Component {
         catBreed: '',
         catAge: '',
         catGender: '',
-        catColor: '',
     };
 
     handleCatAdd = () => {
         const { addCat } = this.props;
-        const { catName, catBreed, catAge, catGender, catColor } = this.state;
+        const { catName, catBreed, catAge, catGender } = this.state;
         addCat({
             catName,
             catBreed,
             catAge,
-            catGender,
-            catColor
+            catGender
         });
     }
 
@@ -115,11 +113,6 @@ class AddCatForm extends Component {
                     onChangeText={(text) => this.setState({ catGender: text })}
                     autoCorrect={false}
                     placeholder="Male" />
-                <Text>Color</Text>
-                <Input
-                    onChangeText={(text) => this.setState({ catColor: text })}
-                    autoCorrect={false}
-                    placeholder="Orange" />
                 <Text></Text>
                 <ButtonWrapper>
                     <CloseButtonWrapper onPress={closeModal}>
